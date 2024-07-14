@@ -288,12 +288,34 @@ document.getElementById('openVPNMusic').addEventListener('click', function(event
 </script>
 
     <div class="design_studio" id="border3"><a href="https://clashcn.com/" target="_blank" ><i class="icon iconfont icon-gjux" id="icon"></i><br><font face="微软雅黑" >代 理 软 件</font></a></div>
-    <div class="design_studio" id="border4"><a href="https://shenhouyun.com/id/" target="_blank" ><i class="icon iconfont icon-Group3" id="icon"></i><br><font face="微软雅黑" >小 火 箭</font></a></div>
+    <div class="container">
+    <h2>波兰节点</h2>
+    <p>点击按钮导入节点配置，或取消复制节点链接。</p>
+    <button class="button" id="importBtn">导入节点配置</button>
+    <button class="button cancel" id="copyBtn">复制节点链接</button>
+</div>
+
+<script>
+document.getElementById('importBtn').addEventListener('click', function() {
+    window.location.href = 'https://sub.xeton.dev/sub?target=clash&new_name=true&url=vmess%3A%2F%2FYXV0bzo0Yzg4NzM3ZC1mMTc1LTRlZDEtOTRlNy1jNWY2N2MwNWEzYThAMTI4LjIwNC4yMjMuMTAwOjk4MTg%3FobfsParam%3D%257B%25221%2522%3A%25221%2522%2C%2522Host%2522%3A%2522download.windowsupdate.com%2522%257D%26path%3D%2Fdownload%26obfs%3Dwebsocket%26alterId%3D0&insert=false&config=https%3A%2F%2Fraw.githubusercontent.com%2FACL4SSR%2FACL4SSR%2Fmaster%2FClash%2Fconfig%2FACL4SSR_Online.ini';
+});
+
+document.getElementById('copyBtn').addEventListener('click', function() {
+    var dummy = document.createElement('input');
+    var text = 'https://sub.xeton.dev/sub?target=clash&new_name=true&url=vmess%3A%2F%2FYXV0bzo0Yzg4NzM3ZC1mMTc1LTRlZDEtOTRlNy1jNWY2N2MwNWEzYThAMTI4LjIwNC4yMjMuMTAwOjk4MTg%3FobfsParam%3D%257B%25221%2522%3A%25221%2522%2C%2522Host%2522%3A%2522download.windowsupdate.com%2522%257D%26path%3D%2Fdownload%26obfs%3Dwebsocket%26alterId%3D0&insert=false&config=https%3A%2F%2Fraw.githubusercontent.com%2FACL4SSR%2FACL4SSR%2Fmaster%2FClash%2Fconfig%2FACL4SSR_Online.ini';
+    document.body.appendChild(dummy);
+    dummy.value = text;
+    dummy.select();
+    document.execCommand('copy');
+    document.body.removeChild(dummy);
+    alert('节点链接已复制到剪贴板！');
+});
+</script>
     <div class="design_studio" id="border5">
     <a href="#" id="openLANShare">
         <i class="icon iconfont icon-GroupCopy6" id="icon"></i>
         <br>
-        <font face="微软雅黑">独 立 节 点</font>
+        <font face="微软雅黑">美 国 节 点</font>
     </a>
 </div>
 
