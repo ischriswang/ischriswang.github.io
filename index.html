@@ -89,55 +89,45 @@ var isindex=false;var title="秀喵驾到啦！";var visitor="亲爱的秀密们
   <meta name="msapplication-TileImage" content="img/icon-144x144.png">
   <meta name="msapplication-TileColor" content="#2F3BA2">
 	
-<script>
-    function checkPassword() {
-        var correctPassword = "137848"; // 设置正确密码
-        var maxAttempts = 3; // 最大尝试次数
-        var attempts = 0; // 当前尝试次数
-
-        // 创建一个密码输入框
-        var passwordInput = document.createElement("input");
-        passwordInput.type = "password";
-        passwordInput.placeholder = "请输入密码";
-
-        // 创建一个提交按钮
-        var submitButton = document.createElement("button");
-        submitButton.textContent = "提交";
-
-        // 创建一个显示消息的区域
-        var message = document.createElement("p");
-        message.style.color = "red";
-
-        // 将输入框、按钮和消息添加到页面中
-        document.body.appendChild(passwordInput);
-        document.body.appendChild(submitButton);
-        document.body.appendChild(message);
-
-        // 提交按钮的点击事件
-        submitButton.onclick = function () {
-            var userInput = passwordInput.value; // 获取用户输入的密码
-            if (userInput === correctPassword) {
-                alert("密码正确！"); // 密码正确时提示
-                document.body.removeChild(passwordInput); // 移除输入框
-                document.body.removeChild(submitButton); // 移除按钮
-                document.body.removeChild(message); // 移除消息
-                return; // 退出函数
-            } else {
-                attempts++;
-                if (attempts < maxAttempts) {
-                    message.textContent = "密码错误！请重新输入。"; // 显示错误消息
-                    passwordInput.value = ""; // 清空输入框
-                } else {
-                    alert("尝试次数过多，返回上一页。"); // 尝试次数用尽时提示
-                    history.go(-1); // 返回上一页
-                }
-            }
-        };
-    }
-
-    // 页面加载时自动调用密码验证
-    checkPassword();
-</script>
+<SCRIPT language=JavaScript> 
+ 
+	function password() { 
+	 
+	var testV = 1; 
+	 
+	var pass1 = prompt('请输入密码:',''); 
+	 
+	while (testV < 3) { 
+	 
+	if (!pass1) 
+	 
+	history.go(-1); 
+	 
+	if (pass1 == "137848") { 
+	 
+	alert('密码正确!'); 
+	 
+	break; 
+	 
+	} 
+	 
+	testV+=-1; 
+	 
+	var pass1 = prompt('密码错误!请重新输入:'); 
+	 
+	} 
+	 
+	if (pass1!="password" & testV ==3) 
+	 
+	history.go(-1); 
+	 
+	return " "; 
+	 
+	} 
+	 
+	document.write(password()); 
+	 
+	</SCRIPT>
 	
 </head>
  <body id = 'content-warp'>
