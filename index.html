@@ -293,74 +293,9 @@ document.getElementById('openVPNMusic').addEventListener('click', function(event
 </script>
 
     <div class="design_studio" id="border3"><a href="https://xui.wangying.me/vpn/" target="_blank" ><i class="icon iconfont icon-gjux" id="icon"></i><br><font face="微软雅黑" >X U I 面 版</font></a></div>
-    <div class="design_studio" id="border4">
-    <a href="#" id="openPolandNodes">
-        <i class="icon iconfont icon-Group3" id="icon"></i>
-        <br>
-<div class="design_studio" id="border3"><a href="https://sw.wangying.me/v2rayN.zip" target="_blank" ><i class="icon iconfont icon-gjux" id="icon"></i><br><font face="微软雅黑" >v 2 r a y N</font></a></div>
-    <div class="design_studio" id="border5">
-    <a href="#" id="openLANShare">
-        <i class="icon iconfont icon-GroupCopy6" id="icon"></i>
-        <br>
-        <font face="微软雅黑">美 国 节 点</font>
-    </a>
-</div>
-
-<script>
-document.getElementById('openLANShare').addEventListener('click', function(event) {
-    var url = "vless://50d3f7a6-0f06-47c8-ad84-8a085bc786fd@www.visa.com.sg:80?encryption=none&security=none&type=ws&host=notls.cdnhub.us.kg&path=%2F#%E5%87%A4%E5%87%B0%E5%9F%8E%E4%B8%A8AMD%20%E2%85%A0";
-
-    var isAutoOpen = confirm("是否要自动打开软件并导入节点配置？");
-
-    if(isAutoOpen) {
-        // 如果用户选择自动打开
-        window.location.href = "clash://install-config?url=" + url;
-    } else {
-        // 如果不自动打开，则直接复制节点链接
-        var dummy = document.createElement("textarea");
-        document.body.appendChild(dummy);
-        dummy.value = url;
-        dummy.select();
-        document.execCommand("copy");
-        document.body.removeChild(dummy);
-        alert("节点链接已复制到剪贴板！");
-    }
-
-    event.preventDefault();
-});
-</script>
-
-	<div class="design_studio" id="border6">
-		<a href="#" id="openClashApp">
-			<i class="icon iconfont icon-Group5" id="icon"></i>
-			<br>
-			<font face="微软雅黑">德 国 节 点</font>
-		</a>
-	</div>
-	
-	<script>
-	document.getElementById('openClashApp').addEventListener('click', function(event) {
-		var url = "https://vless.durl.nyc.mn/zrf";
-		var isAutoOpen = confirm("是否要自动打开软件并导入节点配置？");
-	
-		if(isAutoOpen) {
-			// 如果用户选择自动打开
-			window.location.href = "clash://install-config?url=" + encodeURIComponent(url);
-		} else {
-			// 如果不自动打开，则直接复制节点链接
-			var dummy = document.createElement("textarea");
-			document.body.appendChild(dummy);
-			dummy.value = url;
-			dummy.select();
-			document.execCommand("copy");
-			document.body.removeChild(dummy);
-			alert("节点链接已复制到剪贴板！");
-		}
-	
-		event.preventDefault();
-	});
-	</script>
-	
+    <div class="design_studio" id="border4"><a href="https://sw.wangying.me/v2rayN.zip" target="_blank" ><i class="icon iconfont icon-Group3" id="icon"></i><br><font face="微软雅黑" >V 2 r a y N</font></a></div>
+    <div class="design_studio" id="border5"><a href="https://sw.wangying.me/Clash.exe" target="_blank" ><i class="icon iconfont icon-GroupCopy6" id="icon"></i><br><font face="微软雅黑" >C l a s h</font></a></div>
+    <div class="design_studio" id="border6"><a href="https://apps.apple.com/tr/app/nextvpn-fast-safe-vpn-proxy/id1610773520" target="_blank" ><i class="icon iconfont icon-Group5" id="icon"></i><br><font face="微软雅黑" >免 费 A p p</font></a></div>
 </div>
 </div>
 
